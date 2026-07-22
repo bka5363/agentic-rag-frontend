@@ -1,5 +1,4 @@
 import React from "react";
-import "./globals.css";
 
 export const metadata = {
   title: "Agentic RAG Assistant",
@@ -13,7 +12,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <head>
+        <script src="https://cdn.tailwindcss.com"></script>
+      </head>
+      <body className="bg-slate-900 text-slate-100 min-h-screen font-sans antialiased">
+        {children}
+      </body>
     </html>
   );
 }
